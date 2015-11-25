@@ -1,0 +1,28 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+}
+
+apply plugin: 'groovy'
+apply plugin: "idea"
+apply plugin: "eclipse"
+
+version = '0.1'
+
+repositories {
+  jcenter()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+
+dependencies {
+	runtime 'org.slf4j:slf4j-simple:1.7.7'
+	compile 'org.codehaus.groovy:groovy-all:2.3.7'
+  
+	testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+	testCompile "junit:junit:4.12"
+}
+
