@@ -15,7 +15,7 @@ class Chemistry {
 
 	def propertyMissing(String name) {
 		def comp = new Compound(name)
-		(comp.elements.size() == 1 && comp.elements.values()[0]==1) ? comp.elements.keySet()[0] : comp
+		(comp.elements && comp.elements.values()[0]==1) ? comp.elements.keySet()[0] : comp
 	}
 
 }
